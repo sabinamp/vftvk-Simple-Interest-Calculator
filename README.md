@@ -1,1 +1,1 @@
-# coding-project-template
+# HTML5, JavaScript, CSS project

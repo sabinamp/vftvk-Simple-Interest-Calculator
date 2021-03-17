@@ -4,13 +4,35 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <section id="section1">
+            <div>
+                <h1>Simple Interest Calculator</h1>
+                <div id="formcontainer">               
+                    <form id="form1" onsubmit="return checkdata()">
+                        <label for="principal" class="r-label">Amount</label>
+                        <input type="number" id="principal">  
+                        <br>
+                        <br>
+                        <label for="rate" class="r-label">Interest Rate:</label> 
+                        <input type="range" min="1" max="50" value="3.5" class="slider" step="2" id="rate">
+                        <br>     
+                        <br>         
+                        <label for="years" class="r-label">No. of Years</label>
+                        <input type="number" id="years" min="1" max="30">                            
+                       
+                    </form>
+                    <button onclick="compute()">Compute Interest</button>
+                    <p id="result">
+                        If you deposit principal at an interest rate of rate, you will receive an amount of years, in the year year<br>
+                    </p>               
+                </div> 
+                <p>
+                   <span>© Everyone Can Get Rich </span> 
+                </p>
+            </div>      
+           
+        </section>     
+        
+             
     </body>
 </html>
