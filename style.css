@@ -12,18 +12,19 @@ h1{
 #section1{
     background-color: white;
     border-radius: 10px;
-    width: 65%;
-    height: 65vh;
+    width: 45%;
+    height: 85vh;
     text-align: left;
     margin-top: 1rem;
     padding: 1rem;
+   margin-left: 25%;
     
 }
 
 #formcontainer{           
     text-align: left;    
     padding: 1rem;
-    height: 60%;
+    height: auto;
     width:100%;
     margin-left: 1rem;
 }
@@ -49,7 +50,7 @@ input{
   #result{
     border: 0 none;
     padding: 1rem;
-    margin: 1.5rem 1rem 2rem 0rem;
+    margin: 1.5rem 1rem 1rem 0rem;
     width: 50%;   
   }
 
