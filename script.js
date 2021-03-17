@@ -19,7 +19,7 @@ function compute()
     let year = d.getFullYear()+ Number(years);
     let interest = Number(rate)/100 * Number(amount) * Number(years);
     let computedAmount = Number(amount) + interest;
-    let output=`<p>If you deposit ${amount} at an interest rate of ${rate},\n you will receive an amount of ${computedAmount}, in the year ${year}<p><br>`;
+    let output=`<p>If you deposit ${amount} at an interest rate of ${rate},\n you will receive an amount of ${computedAmount}, in the year ${year}</p>`;
     console.log("total amount after "+ years +" years is: "+computedAmount);
     console.log("output:"+output);
     document.getElementById("result").innerHTML= output;
