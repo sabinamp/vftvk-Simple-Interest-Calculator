@@ -1,12 +1,11 @@
 
-
-
-/* document.getElementById("rate").oninput= function (){
-    let currentRate = document.getElementById("currentRate");
-    let  rate = document.getElementById("rate");
-    let sliderValue= rate.value;
-    currentRate.innerHTML = sliderValue;
-}; */
+let rateSlider = document.getElementById("rate");
+let currentSliderRate = document.getElementById("currentRate");
+currentSliderRate.innerHTML = `${rateSlider.value}%`;
+rateSlider.onchange= function (){
+    
+    currentSliderRate.innerHTML = `${rateSlider.value}%`;
+};  
 
 function compute()
 {
@@ -46,7 +45,7 @@ const checkdata= ()=>{
     return false;
     }
     //If all is well return true.
-    //alert("Form validation is successful."+"\nYou entered the amount: "+amount.value +", years value:"+years.value +" and interest rate:"+rate.value);
+    alert("Form validation is successful."+"\nYou entered the amount: "+amount.value +", years value:"+years.value +" and interest rate:"+rate.value);
     return true;
 }
 

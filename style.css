@@ -1,5 +1,6 @@
 body {
     background-color:#000;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -36,15 +37,21 @@ fieldset{
 
 input{
     box-sizing: border-box;
-    width: 45%;
+    width: 26%;
     border: 1px solid #777;
     background-color: #fff;  
     outline: none;
-    color: hsl(0, 0, 45);
+    /* color: hsl(0, 0, 45); */
     font-family: 'Archivo Narrow', sans-serif;
     font-size: 1rem;
     margin-left:2rem;   
     padding: 0.2rem;   
+  }
+  #years{
+      width:10%;
+  }
+  #principal{
+     margin-left: 4rem;
   }
 
   #result{
@@ -67,12 +74,20 @@ input{
 }
 
 .r-label{
-    font-family: 'Archivo Narrow', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 1.4rem;
     padding: 0.2rem;
     text-align: left;
-   
+       
+}
+
+
+#currentRate{
+    padding-left: 0.7rem;
+    text-align: center;  
+    font-size: 1.1rem; 
+    font-weight: 600;
 }
