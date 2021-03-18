@@ -20,12 +20,12 @@ function compute()
    if(isValidData){
     let d= new Date();
     let year = d.getFullYear()+ Number(years);
-    let interest = Number(rate)/100 * Number(principal) * Number(years);
+    let interest = Number(principal) * Number(years)*Number(rate)/100;
     let computedAmount = Number(principal) + interest;
     let output=`<p>If you deposit <mark>${principal}</mark> at an interest rate of <mark>${rate}</mark>,\n 
     you will receive an amount of <mark>${computedAmount}</mark>, in the year <mark>${year}</mark></p>`;
-    console.log("total amount after "+ years +" years is: "+computedAmount);
-    console.log("output:"+output);
+   // console.log("total amount after "+ years +" years is: "+computedAmount);
+    //console.log("output:"+output);
     document.getElementById("result").innerHTML= output;
    }
     
@@ -35,7 +35,7 @@ const checkdata= ()=>{
     const amount= document.getElementById("principal");
     const years = document.getElementById("years");
    
-    console.log("amount: "+amount.value +", years value:"+years.value +", interest rate:"+rate.value);
+   // console.log("amount: "+amount.value +", years value:"+years.value +", interest rate:"+rate.value);
     //Check if amount field is empty , 0 or negative
     if(amount.value == ""){
         alert("Please enter an amount");
