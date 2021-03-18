@@ -36,11 +36,15 @@ const checkdata= ()=>{
     const years = document.getElementById("years");
    
     console.log("amount: "+amount.value +", years value:"+years.value +", interest rate:"+rate.value);
-    //Check if amount field is empty
+    //Check if amount field is empty , 0 or negative
     if(amount.value == ""){
         alert("Please enter an amount");
         amount.focus();
         return false;
+    }else if(amount.value <= 0){        
+            alert("Please enter a positive number");
+            amount.focus();
+            return false;
     }
     //Check if years field is empty
     if(years.value == ""){
