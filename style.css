@@ -2,6 +2,7 @@ body {
     background-color:#000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    color: white;
     
 }
 
@@ -15,12 +16,15 @@ h1{
 .maindiv{
     background-color: white;
     border-radius: 25px;
-    width: 300px;
-    height: 85vh;
+    /*
+    * instead of 300px, 45% is a better choice for larger screens
+    */
+    width: 45%;
+    height: 75vh;
     text-align: left;  
     padding: 20px;
     margin: 0 auto;
-   color:#000;
+    color:#000;
 }
 
 #formcontainer{           
