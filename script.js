@@ -1,25 +1,29 @@
-
-let rateSlider = document.getElementById("rate");
-let currentSliderRate = document.getElementById("currentRate");
-currentSliderRate.innerHTML = `${rateSlider.value}%`;
-rateSlider.onchange= function (){
-    
+  
+function updateSliderValue(){
+    let rateSlider = document.getElementById("rate");
+    let currentSliderRate = document.getElementById("currentRate");
     currentSliderRate.innerHTML = `${rateSlider.value}%`;
-};  
+    rateSlider.onchange= function (){
+        
+        currentSliderRate.innerHTML = `${rateSlider.value}%`;
+    };
+}
+updateSliderValue();
 
 function compute()
 {
    let rate = document.getElementById("rate").value;
-   let amount= document.getElementById("principal").value;
+   let principal= document.getElementById("principal").value;
    let years = document.getElementById("years").value;
   
    let isValidData = checkdata();
    if(isValidData){
     let d= new Date();
     let year = d.getFullYear()+ Number(years);
-    let interest = Number(rate)/100 * Number(amount) * Number(years);
-    let computedAmount = Number(amount) + interest;
-    let output=`<p>If you deposit ${amount} at an interest rate of ${rate},\n you will receive an amount of ${computedAmount}, in the year ${year}</p>`;
+    let interest = Number(rate)/100 * Number(principal) * Number(years);
+    let computedAmount = Number(principal) + interest;
+    let output=`<p>If you deposit <mark>${principal}</mark> at an interest rate of <mark>${rate}</mark>,\n 
+    you will receive an amount of <mark>${computedAmount}</mark>, in the year <mark>${year}</mark></p>`;
     console.log("total amount after "+ years +" years is: "+computedAmount);
     console.log("output:"+output);
     document.getElementById("result").innerHTML= output;
